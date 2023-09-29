@@ -45,11 +45,11 @@ Ball.prototype.update = function () {
     }
 
     if (this.velY === 0) {
-        this.velY = this.velY+1
+        this.velY = this.velY + 1
     }
 
     if (this.velX === 0) {
-        this.velX = this.velX-1
+        this.velX = this.velX - 1
     }
 
     this.x += this.velX;
@@ -64,14 +64,8 @@ Ball.prototype.collisionDetect = function () {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < this.size + balls[j].size) {
-                balls[j].color = this.color =
-                    "rgb(" +
-                    randomNumberForCreating(0, 255) +
-                    "," +
-                    randomNumberForCreating(0, 255) +
-                    "," +
-                    randomNumberForCreating(0, 255) +
-                    ")";
+                balls[j].velX = balls[j].velX * -1;
+                balls[j].velY = balls[j].velY * -1;
             }
         }
     }
