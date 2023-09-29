@@ -82,7 +82,7 @@ function loop() {
             randomNumberForCreating(-8, 8),
             randomNumberForCreating(-8, 8),
             "rgb(" + randomNumberForCreating(0, 255) + "," + randomNumberForCreating(0, 255) + "," + randomNumberForCreating(0, 255) + ")",
-            randomNumberForCreating(10, 60)
+            20
         );
         balls.push(ball)
     }
